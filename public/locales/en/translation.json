@@ -1,0 +1,21 @@
+{
+  "pageTitle": "Layout & Style",
+  "moveShape": "Move shape",
+  "movePosition": "Move position",
+  "randomPosition": "Random Position",
+  "home": {
+    "ariaLabel": "Test menu",
+    "test1": {
+      "title": "Test 1",
+      "subtitle": "Layout & Style"
+    },
+    "test2": {
+      "title": "Test 2",
+      "subtitle": "Connect API"
+    },
+    "test3": {
+      "title": "Test 3",
+      "subtitle": "Form & Table"
+    }
+  }
+}
