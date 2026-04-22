@@ -1,8 +1,7 @@
 {
   "pageTitle": "การจัดวางและสไตล์",
   "moveShape": "เลื่อนรูปแบบ",
-  "movePosition": "เลื่อนตำแหน่ง",
-  "randomPosition": "สุ่มตำแหน่ง",
+  "movePosition": "เปลี่ยนตำแหน่ง",
   "home": {
     "ariaLabel": "เมนูทดสอบ",
     "test1": {

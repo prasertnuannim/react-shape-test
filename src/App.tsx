@@ -9,6 +9,7 @@ const { Content } = Layout;
 const { Title } = Typography;
 
 type Page = "home" | "shape";
+type MenuKey = "test1" | "test2" | "test3";
 
 function getPageFromHash(): Page {
   if (typeof window === "undefined") {
@@ -21,6 +22,11 @@ function getPageFromHash(): Page {
 export default function App() {
   const { t } = useTranslation();
   const [page, setPage] = useState<Page>(() => getPageFromHash());
+  const menuItems: Array<{ key: MenuKey; page?: Page }> = [
+    { key: "test1", page: "shape" },
+    { key: "test2" },
+    { key: "test3" },
+  ];
 
   const {
     targetShapes,
@@ -40,24 +46,8 @@ export default function App() {
   }, []);
 
   const openPage = (nextPage: Page) => {
-    window.location.hash = nextPage === "shape" ? "#shape" : "#home";
+    window.location.assign(nextPage === "shape" ? "#shape" : "#home");
   };
-
-  const menuItems = [
-    {
-      title: t("home.test1.title"),
-      subtitle: t("home.test1.subtitle"),
-      page: "shape" as const,
-    },
-    {
-      title: t("home.test2.title"),
-      subtitle: t("home.test2.subtitle"),
-    },
-    {
-      title: t("home.test3.title"),
-      subtitle: t("home.test3.subtitle"),
-    },
-  ];
 
   return (
     <Layout className={`app-layout ${page === "home" ? "app-layout-home" : "app-layout-shape"}`}>
@@ -74,14 +64,14 @@ export default function App() {
 
                 return (
                   <button
-                    key={item.title}
+                    key={item.key}
                     type="button"
                     className={`home-menu-card ${isEnabled ? "" : "is-disabled"}`}
                     onClick={() => item.page && openPage(item.page)}
                     disabled={!isEnabled}
                   >
-                    <span className="home-menu-card-title">{item.title}</span>
-                    <span className="home-menu-card-subtitle">{item.subtitle}</span>
+                    <span className="home-menu-card-title">{t(`home.${item.key}.title`)}</span>
+                    <span className="home-menu-card-subtitle">{t(`home.${item.key}.subtitle`)}</span>
                   </button>
                 );
               })}

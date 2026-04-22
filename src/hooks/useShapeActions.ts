@@ -1,7 +1,25 @@
 import { useState } from "react";
-import { initialTargetShapes } from "../data/shapes";
 import type { ShapeItem } from "../types/shape";
-import { shuffleArray } from "../utils/shuffle";
+
+const initialTargetShapes: ShapeItem[] = [
+  { id: 1, type: "square" },
+  { id: 2, type: "circle" },
+  { id: 3, type: "oval" },
+  { id: 4, type: "trapezoid" },
+  { id: 5, type: "rectangle" },
+  { id: 6, type: "parallelogram" },
+];
+
+function shuffleArray<T>(items: T[]): T[] {
+  const arr = [...items];
+
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  return arr;
+}
 
 function rotateTargets(items: ShapeItem[], direction: "left" | "right"): ShapeItem[] {
   if (items.length < 2) {
