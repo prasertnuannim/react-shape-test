@@ -1,0 +1,20 @@
+Test : Frontend Developer (React)
+There are 2 questions in total.
+1. Frontend React (details in the React clip)
+- Use TypeScript.
+- Create a language switcher using i18next.
+- Design the button layout using Antd Design.
+- Create various button shapes using CSS (SCSS experience will be considered a plus).
+Each button can manage the webpage as follows:
+* Move Shape: Move the shape below by rotating it to the left.
+* Move Position: This will swap the Grid Layout up or down.
+* Clicking on the various shapes below will randomly generate new positions.
+- Colors used
+* #ffa200
+* #6eda78
+
+2. Create a single-page application (SPA) using Ant Design to collect user data (details in the React clip).
+- Manage data including Create, Edit, and Delete operations to local storage (data should not be lost when the website is refreshed).
+- Use Redux-toolkit to manage form data instead of useState.
+- The table must have pagination, sorting, and the ability to delete individual items.
+- translate language
