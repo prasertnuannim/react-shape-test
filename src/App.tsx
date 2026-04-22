@@ -15,7 +15,6 @@ function getPageFromHash(): Page {
   if (typeof window === "undefined") {
     return "home";
   }
-
   return window.location.hash === "#shape" ? "shape" : "home";
 }
 
@@ -40,7 +39,6 @@ export default function App() {
     const syncPage = () => {
       setPage(getPageFromHash());
     };
-
     window.addEventListener("hashchange", syncPage);
     return () => window.removeEventListener("hashchange", syncPage);
   }, []);

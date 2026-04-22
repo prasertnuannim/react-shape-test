@@ -23,7 +23,7 @@ body {
 
 .app-layout-home,
 .app-layout-shape {
-  background: linear-gradient(90deg, #79db9c 0%, #ffb300 100%);
+  background: linear-gradient(90deg, #6eda78 0%, #ffa200 100%);
 }
 
 .language-switcher-floating {
@@ -156,7 +156,7 @@ body {
 }
 
 .shape-panel:hover {
-  background: #ffad1f;
+  background: #ffa200;
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(116, 112, 42, 0.18);
 }
@@ -172,7 +172,7 @@ body {
 }
 
 .shape-panel-target:hover {
-  background: #ffad1f;
+  background: #ffa200;
   transform: none;
   box-shadow: 0 8px 18px rgba(116, 112, 42, 0.12);
 }
@@ -203,7 +203,7 @@ body {
 }
 
 .shape-panel-action:hover {
-  background: #46c8a6;
+  background: #6eda78;
 }
 
 @media (max-width: 768px) {
